@@ -10,5 +10,4 @@ RUN npm install --production && \
 
 ADD . /app
 
-ENV NODE_ENV production
 ENTRYPOINT ["bin/server"]
