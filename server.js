@@ -51,7 +51,7 @@ function maybe_bounce(req, res, opt, sock, head) {
     if(opt.host) {
       subdomain = hostname.replace(new RegExp(`\.${opt.host}$`), '');
     }
-    if (!subdomain) {
+    if (!subdomain || hostname == opt.host) {
         return false;
     }
 
